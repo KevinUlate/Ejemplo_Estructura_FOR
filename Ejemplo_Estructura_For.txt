@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main()
+        {
+            string[] array = new string[] {"Nombre:","Apellido1:","Apellido2:"}; // Este array guarda las palabras de los datos a solicitar
+            string[] array2 = new string[3]; // Este array guarda los resultados escritos por el usuario
+            for (int i = 0; i < 3; i++) { //Estructura For se ejecuta el codigo dentro de la estructura por cada valor de la variable "i" mientras "i" sea menor que 3, el "i++" incremente el valor de la variable
+                Console.WriteLine(array[i]); //Escribe en pantalla cada uno de las palabras guardas en el array 1
+                array2[i] = Console.ReadLine();//Almacena cada uno de los valores escritos por el usurio dentro del array
+                Console.Clear();//Limpia pantalla
+            }
+            Console.WriteLine("Bienvenido:" + " " + array2[0] + " " + array2[1] + " " + array2[2]);//Escribe en pantalla los valores digitados por el usuario
+            Console.WriteLine("Press any key to exit.");// Escribe en pantalla el mensaje 
+            Console.ReadKey();// Permite que los valores se mantengan en pantalla hasta que se presione un tecla
+        }
+    }
+}
